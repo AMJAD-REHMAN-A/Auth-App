@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { toast } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ProfilePage() {
     const route = useRouter();
@@ -19,6 +19,7 @@ export default function ProfilePage() {
         <div className="flex flex-col items-center justify-center min-h-screen">
             <h1 className="text-4xl">Profile Page</h1>
             <button onClick={onLogout}>Log Out</button>
+            <Toaster />
         </div>
     )
 }
